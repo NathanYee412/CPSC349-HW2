@@ -6,6 +6,52 @@ var HIDDEN_DETAIL_CLASS = 'hidden-detail';
 var TINY_EFFECT_CLASS = 'is-tiny';
 var ESC_KEY = 27;
 
+var id1 = "img/otter1.jpg";
+var id2 = "img/otter2.jpg";
+var id3 = "img/otter3.jpg";
+var id4 = "img/otter4.jpg";
+var id5 = "img/otter5.jpg";
+var id6 = "img/flexboxFroggy.jpg";
+var id7 = "img/gridGarden.jpg";
+
+var t1 = "Stayin' Alive";
+var t2 = "How Deep Is Your Love";
+var t3 = "You Should Be Dancing";
+var t4 = "Night Fever";
+var t5 = "To Love Somebody";
+var t6 = "Flexbox Froggy";
+var t7 = "Grid Garden";
+ 
+var counter = 0;
+
+
+function prev() {
+    var THUMBARR = [id1, id2, id3, id4, id5, id6, id7];
+    var TITLEARR = [t1, t2, t3, t4, t5, t6, t7];
+    var i = counter;
+    console.log(i);
+    if (counter === 0) {
+        counter = 7;
+    }
+    counter -= 1;
+    setDetails(THUMBARR[i], TITLEARR[i]);
+}
+
+function next() {
+    'use strict';
+    var THUMBARR = [id1, id2, id3, id4, id5, id6, id7];
+    var TITLEARR = [t1, t2, t3, t4, t5, t6, t7];
+    var i = counter;
+    console.log(i);
+    if (counter === 6) {
+        counter = -1
+    }
+    counter += 1;
+    setDetails(THUMBARR[i], TITLEARR[i]);
+};
+
+
+
 function setDetails(imageUrl, titleText) {
     'use strict';
     var detailImage = document.querySelector(DETAIL_IMAGE_SELECTOR);

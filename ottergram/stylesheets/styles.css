@@ -145,6 +145,21 @@
   .hidden-detail .thumbnail-item {
     max-width: 80%;
   }
+
+  .prev-next {
+    justify-content: space-around;
+    font-size: 2em;
+    font-family: sans-serif;
+    padding: 0 50px 0 50px;
+  }
+
+  .prev-next button {
+    text-decoration: none;
+  }
+
+  .prev-next button:hover {
+    color: black;
+  }
   
   @media all and (min-width: 1080px) {
     .main-content {
